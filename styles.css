@@ -1,0 +1,510 @@
+/* Сброс базовых отступов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Общий контейнер */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Фон страницы и шрифты */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1C1C1C;
+  color: #FFFFFF;
+}
+
+/* ===== БАННЕР ===== */
+.banner {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== ИНФО-КАРТОЧКА ===== */
+.info-card {
+  background-color: #2A2A2A;
+  border-radius: 10px;
+  margin: -30px auto 20px auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.info-card h1 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #FFFFFF;
+}
+
+.sub-info {
+  font-size: 0.9rem;
+  color: #BFBFBF;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #D0D0D0;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* Фиксируем контейнер для поиска вверху экрана */
+.search-bar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 560px;
+  z-index: 150;
+  background-color: #1C1C1C;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Добавляем верхний отступ основному контейнеру, чтобы поиск не перекрывал контент */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 70px 20px 0; /* 70px подбирается в зависимости от высоты поля поиска */
+}
+
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  background-color: #333;  /* новый фон */
+  color: #fff;             /* цвет текста, если фон тёмный */
+}
+
+
+/* ===== КНОПКИ info-btn ===== */
+/* Основной контейнер с отступом снизу для таб-бара */
+/* Обновлённый контейнер: добавляем нижний отступ, чтобы контент не перекрывался таб-баром */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px 80px; /* нижний отступ, чтобы контент не закрывался таб-баром */
+}
+
+.info-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 560px;  /* фиксированная ширина, как у контейнера */
+  z-index: 100;
+  background-color: #2A2A2A;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+
+
+
+
+
+
+
+.info-btn {
+  background-color: #444;
+  color: #FFFFFF;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.info-btn:hover {
+  background-color: #FFA000;
+  color: #000;
+}
+
+.info-btn.active {
+  background-color: #444;
+  color: #FFFFFF;
+  border: 2px solid #FFA000;
+}
+
+/* ===== ОСНОВНЫЕ КАРТОЧКИ КАТЕГОРИЙ ===== */
+.categories-cards {
+  margin: 0 auto 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.category-card {
+  width: 100%;
+  height: 130px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.category-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
+  text-align: center;
+}
+
+.category-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.category-card:hover .overlay {
+  background: rgba(0,0,0,0.7);
+}
+
+/* ===== РАЗДЕЛ С БЛЮДАМИ ===== */
+.menu-items {
+  margin: 0 auto 40px auto;
+  /* Уже есть display: none; по умолчанию */
+  position: relative; /* чтобы можно было позиционировать кнопку внутри */
+}
+
+/* Контейнер для кнопки */
+.back-btn-container {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* или left: 10px, если хотите слева */
+}
+
+/* Стили кнопки */
+.back-btn {
+  background-color: #444;
+  color: #FFFFFF;
+  border: 2px solid transparent;
+  border-radius: 50%; /* Круглая кнопка */
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.back-btn:hover {
+  background-color: #FFA000;
+  color: #000;
+}
+
+
+
+
+.items-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.menu-item {
+  width: 45%;
+  background-color: #2A2A2A;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  display: none;
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto; /* высота автоматически подстраивается */
+  object-fit: cover; /* можно убрать, если нужно видеть всю картинку */
+}
+
+
+.menu-item h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;        /* Увеличенный размер шрифта */
+  font-weight: bold;        /* Жирное начертание */
+  color: #FFA000;           /* Яркий цвет, например, оранжевый */
+  text-transform: uppercase; /* Можно добавить для акцента */
+}
+
+
+.menu-item p {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* ===== АДАПТИВНЫЕ НАСТРОЙКИ ===== */
+@media (max-width: 500px) {
+  .banner {
+    height: 180px;
+  }
+  .info-card {
+    margin-top: -40px;
+  }
+  .category-card {
+    height: 150px;
+  }
+  .menu-item {
+    width: 100%;
+  }
+}
+
+
+/* Модальное окно (скрыто по умолчанию) */
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Фиксированное положение */
+  z-index: 200; /* Поверх всего */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Прокрутка при необходимости */
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+}
+
+/* Контент модального окна */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* Центрирование, 10% от верха */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  color: #000;
+}
+
+/* Кнопка закрытия модального окна */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Стили для модального окна */
+/* Стили для модального окна заказов */
+/* Стили для модального окна заказов */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  background-color: #2A2A2A;
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Стили для элементов заказа внутри модального окна */
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #444;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.order-item .order-info {
+  flex-grow: 1;
+}
+
+.order-item .order-info p {
+  margin: 2px 0;
+  font-size: 0.9rem;
+}
+
+.order-item button {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.order-item button:hover {
+  background-color: #FFA000;
+  color: #000;
+}
+
+/* Стили для кнопки "+" внутри модального окна блюда (для добавления в заказ) */
+.add-to-order {
+  background-color: #FFA000;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.add-to-order:hover {
+  background-color: #ffbf40;
+}
+/* Для модального окна (заказов) */
+#order-modal .close {
+  font-size: 36px;  /* Увеличенный размер */
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+/* Панель управления количеством, появляющаяся рядом с кнопкой "add-to-order" */
+.quantity-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 10px;
+}
+
+.quantity-controls button {
+  background-color: #FFA000;
+  border: none;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 1rem;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.quantity-controls button:hover {
+  background-color: #ffbf40;
+}
+
+.quantity-controls span {
+  font-size: 1rem;
+  min-width: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.title-icon {
+  width: 40px;      /* Размер иконки, настройте по вкусу */
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle; /* Чтобы иконка была по центру текста */
+}
+.title-icon {
+  width: 60px;      /* увеличенный размер */
+  height: 60px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.info-card h1 {
+  font-size: 2.5rem;              /* Увеличенный размер заголовка */
+  font-family: 'Georgia', serif;  /* Можно заменить на любой красивый шрифт */
+  color: #FFA000;                 /* Яркий оранжевый цвет */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Тень для объёма */
+  border-bottom: 2px solid #FFA000; /* Нижняя линия для акцента */
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tab-icon {
+  width: 40px;    /* Подберите нужный размер */
+  height: 40px;
+  display: inline-block;
+}
+.orders-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+
+

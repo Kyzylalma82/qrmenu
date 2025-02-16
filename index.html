@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кызыл-Алма</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Баннер -->
+    <div class="banner">
+      <img src="images/banner2.jpg" alt="Баннер" class="banner-img">
+    </div>
+
+    <!-- Инфо-карточка -->
+    <div class="info-card">
+      <h1>
+        <img src="images/logo.png" alt="Icon" class="title-icon">
+        Кызыл-Алма
+      </h1>
+      <p class="sub-info">с. Чаек, ул. Э.Матыева, 82. тел. 5065323653</p>
+      <p class="description">Желаем приятно провести время</p>
+      <div class="search-bar">
+        <input type="text" placeholder="Поиск...">
+      </div>
+    </div>
+
+    <!-- Контейнер для динамически загружаемых карточек категорий -->
+    <section class="categories-cards" id="categories-cards-container">
+      <!-- Карточки категорий создаются через JavaScript -->
+    </section>
+
+    <!-- Раздел с блюдами (по умолчанию скрыт) -->
+    <section class="menu-items" id="menu-items" style="display: none;">
+      <div class="items-list">
+        <!-- Карточки блюд создаются через JavaScript -->
+      </div>
+    </section>
+  </div>
+
+  <!-- Таб-бар (иконки) вынесем отдельно, чтобы он всегда оставался видимым -->
+  <div class="info-buttons" id="info-buttons">
+    <button class="info-btn" data-action="categories" style="position: relative;">
+      <img src="images/home-icon.png" alt="Главное меню" class="tab-icon">
+    </button>
+    <button class="info-btn" data-category="pizza" style="position: relative;">
+      <img src="images/pizza-icon.png" alt="Пицца" class="tab-icon">
+    </button>
+    <button class="info-btn" data-category="drinks" style="position: relative;">
+      <img src="images/drinks-icon.png" alt="Напитки" class="tab-icon">
+    </button>
+    <button class="info-btn" data-category="orders" style="position: relative;">
+      <img src="images/orders-icon.png" alt="Заказы" class="tab-icon">
+      <span class="orders-count">0</span>
+    </button>
+  </div>
+
+  <!-- Модальное окно для блюд -->
+  <div id="dish-modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="close">&times;</span>
+      <div id="dish-details"></div>
+    </div>
+  </div>
+
+  <!-- Модальное окно для заказов -->
+  <div id="order-modal" class="modal">
+    <div class="modal-content order-modal-content">
+      <span id="order-modal-close" class="close">&times;</span>
+      <div id="order-details"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
